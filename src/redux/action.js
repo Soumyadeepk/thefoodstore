@@ -1,0 +1,10 @@
+export const CHANGE_LOG = "CHANGE_LOG";
+export const ADD_TO_CART = "ADD_TO_CART";
+export const REMOVE_ITEM = "REMOVE_ITEM";
+export const DELETE_ITEM = "DELETE_ITEM";
+export const SET_FILTER = "SET_FILTER";
+export const SET_PRICE = "SET_PRICE";
+export const SET_ADDRESS = "SET_ADDRESS";
+export const SET_EMAIL = "SET_EMAIL";
+export const SET_ORDER = "SET_ORDER";
+export const CLEAR_CART = "CLEAR_CART";
