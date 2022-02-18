@@ -4,7 +4,11 @@ const Header = () => {
   return (
     <div>
       <div className=" lg:pt-10 flex flex-col lg:flex-row items-center text-white bg-black">
-        <div className="lg:w-1/2 lg:pl-32">
+        <div
+          className="lg:w-1/2 lg:pl-32"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div className="heading text-2xl lg:text-7xl font-bold overflow-hidden">
             <div className="">Get the Best </div> <div> Pizza in the City</div>
           </div>
@@ -14,7 +18,12 @@ const Header = () => {
           <Button text="Explore" />
         </div>
         <div className="w-full lg:w-auto">
-          <img src="/images/home/header.png" alt="" />
+          <img
+            src="/images/home/header.png"
+            alt=""
+            data-aos="fade-left"
+            data-aos-delay="400"
+          />
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

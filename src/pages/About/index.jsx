@@ -39,7 +39,7 @@ const About = () => {
         <div className="mt-64 mb-32 z-20">
           <div className="flex">
             <div className="w-1/2 flex flex-col items-center">
-              <div className="w-1/2">
+              <div className="w-1/2" data-aos="fade-up" data-aos-delay="200">
                 <div className="text-4xl font-bold">About Us</div>
                 <div className="mt-4">
                   We serve authentic, seasonal, Italian cuisine which means that

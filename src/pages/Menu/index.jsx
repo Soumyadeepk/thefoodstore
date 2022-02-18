@@ -49,6 +49,8 @@ const Menu = () => {
                 src="/images/productImages/pizza1.jpg"
                 alt=""
                 className="w-72 h-96 object-cover rounded"
+                data-aos="fade-right"
+                data-aos-delay="200"
               />
             </div>
             <div className="w-1/2 flex flex-col items-center">
@@ -112,6 +114,8 @@ const Menu = () => {
                 src="/images/productImages/pizza2.jpg"
                 alt=""
                 className="w-72 h-96 object-cover rounded"
+                data-aos="fade-left"
+                data-aos-delay="200"
               />
             </div>
           </div>

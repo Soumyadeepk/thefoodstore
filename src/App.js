@@ -9,8 +9,14 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import Cart from "./pages/Cart";
 import Billing from "./pages/Billing";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
   return (
     <Provider store={store}>
       <BrowserRouter>
