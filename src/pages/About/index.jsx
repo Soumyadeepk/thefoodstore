@@ -25,7 +25,7 @@ const About = () => {
   }, []);
   return (
     <div ref={el}>
-      <div className="screen_mover absolute z-50 top-0 left-0 w-screen h-screen text-4xl font-bold  flex flex-col items-center justify-center bg-white">
+      <div className="screen_mover absolute z-50 top-0 left-0 w-screen h-screen lg:text-4xl font-bold  flex flex-col items-center justify-center bg-white">
         <div className="flex items-center ">
           About
           <img
@@ -36,12 +36,17 @@ const About = () => {
         </div>
       </div>
       {showScreen ? (
-        <div className="mt-64 mb-32 z-20">
-          <div className="flex">
-            <div className="w-1/2 flex flex-col items-center">
-              <div className="w-1/2" data-aos="fade-up" data-aos-delay="200">
-                <div className="text-4xl font-bold">About Us</div>
-                <div className="mt-4">
+        <div className="mt-12 lg:mt-48 mb-32 z-20">
+          <div className="flex flex-col lg:flex-row">
+            <div className="lg:w-1/2 flex flex-col items-center">
+              <div className="w-4/5 lg:w-2/3">
+                <div
+                  className="text-2xl lg:text-4xl font-bold"
+                  data-aos="fade-up"
+                >
+                  About Us
+                </div>
+                <div className="mt-4" data-aos="fade-up" data-aos-delay="200">
                   We serve authentic, seasonal, Italian cuisine which means that
                   every dish is prepared individually and is prepared with the
                   utmost attention to details, to ensure maximum comfort to our
@@ -55,33 +60,33 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="mt-48 lg:mt-0 lg:w-1/2">
               <div className="relative">
                 <img
                   src="/images/about/pic1.jpg"
                   alt=""
-                  className="w-96 h-64 absolute top-20 left-48 z-10"
+                  className="w-64 lg:w-96 h-48 lg:h-64 absolute top-20 left-48 z-10"
                 />
                 <img
                   src="/images/about/pic2.jpg"
                   alt=""
-                  className="w-96 h-64 absolute -top-20 left-12"
+                  className="w-64 lg:w-96 h-48 lg:h-64 absolute -top-20 left-12"
                 />
               </div>
             </div>
           </div>
-          <div className="flex items-center mt-64">
-            <div className="w-1/2 flex flex-col items-center">
+          <div className="flex flex-col lg:flex-row lg:items-center mt-96 lg:mt-64">
+            <div className="lg:w-1/2 flex flex-col items-center">
               <div className="">
                 <img
                   src="/images/about/pic3.jpg"
                   alt=""
-                  className="w-72 h-96"
+                  className="w-64 lg:w-72 h-72 lg:h-96"
                 />
               </div>
             </div>
-            <div className="w-1/2 flex flex-col items-center">
-              <div className=" w-2/3">
+            <div className="lg:w-1/2 flex flex-col items-center">
+              <div className="mt-4 lg:mt-0 w-2/3">
                 We serve delicious dishes that are prepared with passion and
                 care and can be enjoyed in a contemporary and relaxed setting.
                 Start with a delicious signature dish that will set your heart
@@ -103,7 +108,7 @@ const About = () => {
           </div>
         </div>
       ) : (
-        <div className="absolute z-40 top-0 left-0 w-screen h-screen text-white flex flex-col items-center justify-center bg-black"></div>
+        <div className="absolute z-40 top-0 left-0 w-screen h-screen text-white flex flex-col items-center justify-center bg-white"></div>
       )}
     </div>
   );

@@ -31,7 +31,7 @@ const Home = () => {
   }, []);
   return (
     <div className="">
-      <div className="screen_mover absolute z-50 top-0 left-0 w-screen h-screen text-4xl font-bold  flex flex-col items-center justify-center bg-white">
+      <div className="screen_mover absolute z-50 top-0 left-0 w-screen h-screen lg:text-4xl font-bold  flex flex-col items-center justify-center bg-white">
         <div className="flex items-center ">
           Welcome to the &nbsp;
           <span className="text-red-800"> Food Store </span>
@@ -51,7 +51,7 @@ const Home = () => {
           <NewReview />
         </div>
       ) : (
-        <div className="absolute z-40 top-0 left-0 w-screen h-screen text-white flex flex-col items-center justify-center bg-black"></div>
+        <div className="absolute z-40 top-0 left-0 w-screen h-screen text-white flex flex-col items-center justify-center bg-white"></div>
       )}
     </div>
   );

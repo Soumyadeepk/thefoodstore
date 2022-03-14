@@ -34,7 +34,7 @@ const Contact = () => {
   }, []);
   return (
     <div className="">
-      <div className="screen_mover absolute z-50 top-0 left-0 w-screen h-screen text-4xl font-bold  flex flex-col items-center justify-center bg-white">
+      <div className="screen_mover absolute z-50 top-0 left-0 w-screen h-screen lg:text-4xl font-bold  flex flex-col items-center justify-center bg-white">
         <div className="flex items-center ">
           Contact
           <img
@@ -45,21 +45,21 @@ const Contact = () => {
         </div>
       </div>
       {showScreen ? (
-        <div className="h-screen flex">
-          <div className="w-1/2 flex flex-col justify-center items-center">
+        <div className="lg:h-screen flex flex-col lg:flex-row items-center lg:items-start ">
+          <div className="w-4/5 lg:w-1/2 flex flex-col justify-center items-center">
             <div className="">
               <div className="text-4xl font-bold">Talk to Us.</div>
               <div className="text-base my-4">
                 Fill up the form and we will contact you within 12 hours
               </div>
             </div>
-            <div className="border border-black cursor-pointer py-2 px-4 flex justify-around w-96 rounded hover:text-white hover:bg-black transition-all duration-300">
+            <div className="border border-black cursor-pointer py-2 px-4 flex justify-around w-80 lg:w-96 rounded hover:text-white hover:bg-black transition-all duration-300">
               <div className="w-1/4">
                 <Mail />
               </div>
               <div className="w-3/4">support@foodstore.com</div>
             </div>
-            <div className="border border-black cursor-pointer py-2 px-4 flex justify-around w-96 rounded my-4 hover:bg-black transition-all duration-300 hover:text-white">
+            <div className="border border-black cursor-pointer py-2 px-4 flex justify-around w-80 lg:w-96 rounded my-4 hover:bg-black transition-all duration-300 hover:text-white">
               <div className="w-1/4">
                 <Instagram />
               </div>
@@ -71,11 +71,11 @@ const Contact = () => {
           </div>
           <form
             action=""
-            className="w-1/2 flex flex-col justify-center items-center bg-black border border-white border-opacity-30"
+            className="w-full lg:w-1/2 h-full py-20 lg:py-0 flex flex-col justify-center items-center bg-black border border-white border-opacity-30"
             id="Form"
             onSubmit={handleForm}
           >
-            <div className="w-1/2">
+            <div className="lg:w-1/2">
               <input
                 type="text"
                 placeholder="Name*"
@@ -83,7 +83,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <div className="w-1/2 my-20">
+            <div className="lg:w-1/2 my-20">
               <input
                 type="text"
                 placeholder="Email*"
@@ -91,7 +91,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <div className="w-1/2">
+            <div className="lg:w-1/2">
               <input
                 type="text"
                 placeholder="Message*"
@@ -116,7 +116,7 @@ const Contact = () => {
           </form>
         </div>
       ) : (
-        <div className="absolute z-40 top-0 left-0 w-screen h-screen text-white flex flex-col items-center justify-center bg-black"></div>
+        <div className="absolute z-40 top-0 left-0 w-screen h-screen text-white flex flex-col items-center justify-center bg-white"></div>
       )}
     </div>
   );

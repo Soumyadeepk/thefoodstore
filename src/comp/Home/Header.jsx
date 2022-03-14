@@ -2,11 +2,13 @@ import Button from "../../comp/Button";
 
 const Header = () => {
   return (
-    <div className="h-[90vh] w-screen flex">
-      <div className="w-1/2 flex flex-col items-center justify-center h-full">
-        <div className="w-2/3">
-          <div className="text-6xl font-extrabold">The Food Store</div>
-          <div className="pl-2 mt-4 text-lg font-medium leading-relaxed ">
+    <div className="lg:h-[90vh] w-screen flex flex-col-reverse lg:flex-row">
+      <div className="lg:w-1/2 flex flex-col items-center justify-center h-full">
+        <div className="w-4/5 lg:w-2/3 mt-6 lg:mt-0">
+          <div className="text-2xl lg:text-6xl font-extrabold">
+            The Food Store
+          </div>
+          <div className="lg:pl-2 mt-4 text-lg font-medium leading-relaxed ">
             We are a cloud kitchen based on vegetarian pizza. <br /> Preferably
             the only one in the city who can serve authentic tastes without the
             involvement of meat.
@@ -18,7 +20,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="w-1/2">
+      <div className="lg:w-1/2">
         <div className="w-full">
           <img
             src="/images/home/header.jpg"

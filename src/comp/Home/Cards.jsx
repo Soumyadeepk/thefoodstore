@@ -20,7 +20,7 @@ const Cards = () => {
   ];
   return (
     <div className="flex flex-col items-center my-12">
-      <div className="grid grid-cols-3 w-3/5 justify-items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-4 lg:gap-y-0 w-3/5 justify-items-center">
         {cardTexts.map((item, i) => {
           return <Card icon={item.icon} text={item.text} desc={item.desc} />;
         })}
