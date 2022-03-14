@@ -4,8 +4,14 @@ const Footer = () => {
   return (
     <div className=" flex justify-around py-24 bg-black text-white">
       <div className="w-1/3">
-        <div className="text-4xl font-bold mb-3">The Food Store</div>
-        <div className="w-3/5">Always available when you are hungry</div>
+        <div className="text-4xl font-bold ">The Food Store</div>
+        <div className="w-3/5 text-xl mt-1 mb-6">Eat without meat</div>
+
+        <div className="text-sm">
+          Address: <br /> 17th main , KHB colony , <br /> Koramangala 5th block
+          <br />
+          Bangalore: 560097
+        </div>
       </div>
       <div className="">
         <div className="text-lg font-bold mb-2">Main Links</div>

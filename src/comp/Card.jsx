@@ -1,14 +1,13 @@
-import "../styles/card.css";
+// import "../styles/card.css";
 
 const Card = (props) => {
   return (
-    <div className=" shadow-lg shadow-green-300">
-      <div className="card_wrapper w-40 h-40 flex flex-col items-center justify-center rounded-lg">
-        <div className="">
-          <img src={props.icon} alt="" className="w-12 h-12" />
-        </div>
-        <div className="text-sm mt-4">{props.text}</div>
+    <div className="card_wrapper w-64 h-80 border flex flex-col items-center justify-center rounded-2xl cursor-pointer transition-all duration-300 hover:bg-[#EBFFE3]">
+      <div className="">
+        <img src={props.icon} alt="" className="w-12 h-12" />
       </div>
+      <div className="mt-4 font-extrabold">{props.text}</div>
+      <div className="text-sm mt-4 text-center">{props.desc}</div>
     </div>
   );
 };

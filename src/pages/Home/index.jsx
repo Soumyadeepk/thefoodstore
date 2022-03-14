@@ -3,8 +3,12 @@ import Explore from "../../comp/Home/Explore";
 import Header from "../../comp/Home/Header";
 import Reviews from "../../comp/Home/Reviews";
 import Steps from "../../comp/Home/Steps";
+import Cards from "../../comp/Home/Cards";
 import { gsap } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
+import Deals from "../../comp/Home/DealSection";
+import Gallery from "../../comp/Home/Gallery";
+import NewReview from "../../comp/Home/NewReview";
 
 const Home = () => {
   const [showScreen, setShowScreen] = useState(false);
@@ -13,12 +17,12 @@ const Home = () => {
     time
       .from(".screen_mover", {
         duration: 2,
-        yPercent: 100,
+        xPercent: -100,
         ease: "power4.out",
       })
       .to(".screen_mover", {
         duration: 1.5,
-        yPercent: -100,
+        xPercent: 100,
         ease: "power4.out",
       });
     setTimeout(() => {
@@ -41,11 +45,10 @@ const Home = () => {
       {showScreen ? (
         <div className="">
           <Header />
-          {/* <Cards /> */}
-          <Steps />
-          <ChefSection />
-          <Explore />
-          <Reviews />
+          <Cards />
+          <Deals />
+          <Gallery />
+          <NewReview />
         </div>
       ) : (
         <div className="absolute z-40 top-0 left-0 w-screen h-screen text-white flex flex-col items-center justify-center bg-black"></div>
@@ -55,3 +58,10 @@ const Home = () => {
 };
 
 export default Home;
+
+{
+  /* <Steps />
+<ChefSection />
+<Explore />
+<Reviews /> */
+}

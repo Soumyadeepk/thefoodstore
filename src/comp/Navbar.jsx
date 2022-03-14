@@ -1,55 +1,49 @@
 import { Menu, ShoppingBag } from "react-feather";
+import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const location = useLocation().pathname;
+  // const location = useLocation().pathname;
+
+  const cart = useSelector((state) => state.cart);
+  const cartTotal = cart.length;
+  console.log(cartTotal);
 
   return (
-    <div
-      className={`flex items-center justify-around py-2 ${
-        location === "/" ? "bg-black" : "bg-transparent"
-      } `}
-    >
-      {location === "/" ? (
-        <div className="w-1/2 pl-20">
-          <img src="/images/logo.png" alt="" className="" />
-        </div>
-      ) : (
-        <div className="w-1/2 pl-20">
+    <div className={`flex items-center justify-between h-[9vh] `}>
+      <div className="w-1/2 pl-20 h-full pt-4">
+        <Link to="/">
           <img src="/images/logoBlack.png" alt="" className="" />
-        </div>
-      )}
+        </Link>
+      </div>
 
       <div
-        className={`w-1/2 hidden lg:flex flex-col items-center ${
-          location === "/" ? "text-white" : "text-black"
-        } `}
+        className={`w-1/2 text-sm hidden lg:flex flex-col items-end justify-center h-full pr-8 `}
       >
-        <div className=" flex w-1/2 justify-around">
-          <Link to="/">
-            <div className="cursor-pointer hover:text-red-700 transition-all duration-300">
-              Home
-            </div>
-          </Link>
-
+        <div className=" flex w-2/3 justify-around">
           <Link to="/menu">
-            <div className="cursor-pointer hover:text-red-700 transition-all duration-300">
-              Menu
+            <div className="cursor-pointer hover:text-green-500 transition-all duration-300">
+              Order now
             </div>
           </Link>
           <Link to="/about">
-            <div className="cursor-pointer hover:text-red-700 transition-all duration-300">
-              About
+            <div className="cursor-pointer hover:text-green-500 transition-all duration-300">
+              About us
             </div>
           </Link>
           <Link to="/contact">
-            <div className="cursor-pointer hover:text-red-700 transition-all duration-300">
-              Contact
+            <div className="cursor-pointer hover:text-green-500 transition-all duration-300">
+              Contact us
             </div>
           </Link>
           <Link to="/cart">
-            <div className="cursor-pointer hover:text-red-700 transition-all duration-300">
+            <div className="cursor-pointer  transition-all duration-300 relative">
               <ShoppingBag size={20} />
+              {cartTotal > 0 && (
+                <span className="absolute -top-2 -right-4 bg-green-500 w-5 h-5 rounded-full flex flex-col items-center justify-center">
+                  <span className="text-xs"> {cartTotal} </span>
+                </span>
+              )}
             </div>
           </Link>
         </div>

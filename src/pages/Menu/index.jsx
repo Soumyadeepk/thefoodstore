@@ -4,10 +4,13 @@ import { ADD_TO_CART } from "../../redux/action";
 import { foodData } from "../../utils/foodData";
 import { gsap } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
+import { CheckCircle } from "react-feather";
+import CartBtn from "../../comp/CartBtn";
 
 const Menu = () => {
   const el = useRef();
   const [showScreen, setShowScreen] = useState(false);
+
   const q = gsap.utils.selector(el);
   useEffect(() => {
     const time = gsap.timeline();
@@ -65,18 +68,16 @@ const Menu = () => {
                 </div>
                 <div className="">Rs {foodData[0].price}</div>
 
-                <div className="">
-                  <button
-                    className="py-3 px-12 border border-black rounded mt-4 hover:bg-black transition-all duration-300 hover:text-white "
-                    onClick={() =>
-                      dispatch({
-                        type: ADD_TO_CART,
-                        payload: { id: 1 },
-                      })
-                    }
-                  >
-                    Add to Cart
-                  </button>
+                <div
+                  className="mt-4"
+                  onClick={() => {
+                    dispatch({
+                      type: ADD_TO_CART,
+                      payload: { id: 1 },
+                    });
+                  }}
+                >
+                  <CartBtn />
                 </div>
               </div>
             </div>
@@ -94,18 +95,16 @@ const Menu = () => {
                   eiusmod id nulla esse.
                 </div>
                 <div className="">Rs {foodData[1].price}</div>
-                <div className="">
-                  <button
-                    className="py-3 px-12 border border-black rounded mt-4 hover:bg-black transition-all duration-300 hover:text-white "
-                    onClick={() =>
-                      dispatch({
-                        type: ADD_TO_CART,
-                        payload: { id: 2 },
-                      })
-                    }
-                  >
-                    Add to Cart
-                  </button>
+                <div
+                  className="mt-4"
+                  onClick={() => {
+                    dispatch({
+                      type: ADD_TO_CART,
+                      payload: { id: 2 },
+                    });
+                  }}
+                >
+                  <CartBtn />
                 </div>
               </div>
             </div>
