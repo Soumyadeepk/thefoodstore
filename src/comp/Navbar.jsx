@@ -35,17 +35,26 @@ const Navbar = () => {
             <X />
           </div>
           <Link to="/menu">
-            <div className="cursor-pointer hover:text-green-500 mt-32 lg:mt-0  mb-12 lg:mb-0 transition-all duration-300">
+            <div
+              className="cursor-pointer hover:text-green-500 mt-32 lg:mt-0  mb-12 lg:mb-0 transition-all duration-300"
+              onClick={() => setShowNav(false)}
+            >
               Order now
             </div>
           </Link>
           <Link to="/about">
-            <div className="cursor-pointer hover:text-green-500  my-12 lg:my-0 transition-all duration-300">
+            <div
+              className="cursor-pointer hover:text-green-500  my-12 lg:my-0 transition-all duration-300"
+              onClick={() => setShowNav(false)}
+            >
               About us
             </div>
           </Link>
           <Link to="/contact">
-            <div className="cursor-pointer hover:text-green-500  my-12 lg:my-0 transition-all duration-300">
+            <div
+              className="cursor-pointer hover:text-green-500  my-12 lg:my-0 transition-all duration-300"
+              onClick={() => setShowNav(false)}
+            >
               Contact us
             </div>
           </Link>
