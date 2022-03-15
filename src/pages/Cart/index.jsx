@@ -46,32 +46,29 @@ const Cart = () => {
         </div>
       </div>
       {showScreen ? (
-        <div className="h-screen">
+        <div className="lg:h-screen">
           {cart.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full">
-              <div className="text-2xl">Your cart is empty :( </div>
+              <div className="text-xl lg:text-2xl">Your cart is empty :( </div>
               <div className="mt-12">
-                <img src="/images/empty.png" alt="" className="w-96" />
+                <img src="/images/empty.png" alt="" className="w-48 lg:w-96" />
               </div>
             </div>
           ) : (
-            <div className="flex flex-col items-center mt-20">
+            <div className="flex flex-col items-center mt-4 lg:mt-20">
               <div className="text-xl">Your Cart</div>
-              <div className="flex w-4/5 mt-20">
-                <div
-                  className="w-2/3 overflow-y-scroll"
-                  style={{ height: "80vh" }}
-                >
+              <div className="flex flex-col lg:flex-row w-4/5 mt-4 lg:mt-20">
+                <div className="lg:w-2/3 overflow-y-scroll lg:h-[80vh]">
                   {cart.map((item, i) => {
                     return (
                       <div className="" key={i}>
-                        <div className="flex mt-8">
-                          <div className="flex w-1/2">
+                        <div className="flex flex-col lg:flex-row mt-8">
+                          <div className="flex lg:w-1/2">
                             <div className="">
                               <img
                                 src={item.image}
                                 alt=""
-                                className="w-48 rounded"
+                                className="w-48 h-24 object-cover  lg:h-auto rounded"
                               />
                             </div>
                             <div className="ml-12">
@@ -79,7 +76,7 @@ const Cart = () => {
                               <div className="">{item.desc}</div>
                             </div>
                           </div>
-                          <div className="w-1/2 flex flex-col items-center">
+                          <div className="w-1/2 mt-3 lg:mt-0 flex flex-col lg:items-center">
                             <div className="">Rs {item.price}</div>
                             <div className="">
                               <div className="flex mt-2">
@@ -117,7 +114,7 @@ const Cart = () => {
                   })}
                 </div>
 
-                <div className="w-1/3 border-l border-black pl-12">
+                <div className="lg:w-1/3 lg:border-l border-black pl-12 mt-32 mb-12 lg:mb-0 lg:mt-0">
                   <div className="text-xl">Amount Details</div>
                   <div className="w-4/5 mt-6">
                     <div className="flex justify-between">
@@ -147,7 +144,7 @@ const Cart = () => {
           )}
         </div>
       ) : (
-        <div className="absolute z-40 top-0 left-0 w-screen h-screen text-white flex flex-col items-center justify-center bg-black"></div>
+        <div className="absolute z-40 top-0 left-0 w-screen h-screen text-white flex flex-col items-center justify-center bg-white"></div>
       )}
     </div>
   );

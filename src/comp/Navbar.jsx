@@ -59,7 +59,10 @@ const Navbar = () => {
             </div>
           </Link>
           <Link to="/cart">
-            <div className="cursor-pointer  transition-all duration-300 relative">
+            <div
+              className="cursor-pointer  transition-all duration-300 relative"
+              onClick={() => setShowNav(false)}
+            >
               <ShoppingBag size={20} />
               {cartTotal > 0 && (
                 <span className="absolute -top-2 -right-4 bg-green-500 w-5 h-5 rounded-full flex flex-col items-center justify-center">
